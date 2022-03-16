@@ -1,0 +1,98 @@
+dialog#main{
+    border: none;
+    box-shadow: 0 0 10px black;
+    width: 500px;
+    margin: auto ;
+    margin-top: 10%;
+    height: 60%;
+    border-radius: 10px;
+    font-family: system-ui;
+    position: absolute;
+}
+dialog#main>h1{
+    text-align: center;
+}
+dialog#main>label{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-top: 30px;
+}
+dialog#main>input{
+    width: 100%;
+    display: inline-block;
+    width: 90%;
+    margin-left: 5%;
+    font-size: 1.1em;
+    margin-top:20px;
+}
+dialog#main>button#run{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    margin: 10px;
+    width: calc(100% - 20px);
+    height: 3em;
+    border: none;
+    border-radius: 10px;
+}
+select#types{
+    background-color: rgb(241, 241, 241);
+    border: none;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+body{margin: 0;}
+dialog#loading{
+    border: none;
+    width: 500px;
+    margin: auto ;
+    margin-top: 10%;
+    height: 60%;
+    border-radius: 10px;
+    font-family: system-ui;
+    position: absolute;
+}
+dialog#loading::backdrop{
+    background-color: white;
+}
+dialog#loading>div#loadMenu{
+    width: 240px;
+    height: 20%;
+    margin-left: calc( ( 100% - 240px ) / 2);
+    margin-top: 40%;
+    display: flex;
+}
+dialog#loading>div#loadMenu>span{
+    display: block;
+    margin: 20px;
+    padding: 0;
+    width: 20px;
+    height: 40px;
+    background: linear-gradient(-135deg,#05FBFF, #8b7bff);
+    border-radius: 20px;
+}
+dialog#loading>div#loadMenu>span.o1{animation: load 1s ease 0s infinite alternate none;}
+dialog#loading>div#loadMenu>span.o2{animation: load 1s ease 0.2s infinite alternate none;}
+dialog#loading>div#loadMenu>span.o3{animation: load 1s ease 0.4s infinite alternate none;}
+dialog#loading>div#loadMenu>span.o4{animation: load 1s ease 0.6s infinite alternate none;}
+dialog#loading.error>div#loadMenu>span{
+    background: red;
+    animation-play-state: paused;
+}
+@keyframes load {
+    to{
+        transform: scaleY(2);
+    }
+}
+dialog#loading>span#output{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+dialog#loading>span#output.error{
+    color: red;
+}

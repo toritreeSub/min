@@ -6,7 +6,7 @@ window.onload = ()=>{
 }
 
 function run(password,type){
-    document.getElementById("loading").setAttribute("open",true)
+    document.getElementById("loading").showModal()
     const out = document.getElementById("output")
     out.textContent = "loading "+type
     fetch(type+".bin",)
@@ -18,5 +18,5 @@ function run(password,type){
         console.log(HTML)
         document.body.innerHTML = HTML
     })
-    .catch(()=>{out.className="error";out.textContent="Cannot read "+type})
+    .catch(()=>{out.className="error";out.textContent="Password is wrong.";document.getElementById("loading").className="error"})
 }
