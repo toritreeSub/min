@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>input password</title>
+</head>
+<body>
+    <dialog open>
+        <select name="types" id="types">
+            <option value="PinkShirtDay">PinkShirtDay</option>
+        </select>
+        <input type="password" id="password">
+        <button id="run">OPEN</button>
+    </dialog>
+    <dialog id="loading">
+        <div id="loadMenu">
+            <span class="o1"></span>
+            <span class="o2"></span>
+            <span class="o3"></span>
+            <span class="o4"></span>
+        </div>
+        <span id="output"></span>
+    </dialog>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/pbkdf2.js"></script>
+    <script src="run.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
